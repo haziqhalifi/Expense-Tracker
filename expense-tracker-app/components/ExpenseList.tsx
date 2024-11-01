@@ -1,4 +1,4 @@
-import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
 
 interface Expense {
     id: number;
@@ -13,6 +13,7 @@ interface Props {
 }
 
 const ExpenseList = ({ expenses, onDelete }: Props) => {
+    if (expenses.length === 0) return null;
     return (
         <table className="table table-bordered">
             <thead>
